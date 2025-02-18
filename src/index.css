@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Satisfy&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+  /* Adjust the width of the scrollbar */
+  height: 10px;
+  /* Adjust the height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  /* Set the color of the scrollbar thumb (the part you drag) */
+  border-radius: 10px;
+  /* Optional: rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+  /* Set the color of the track (the background of the scrollbar) */
+  border-radius: 10px;
+  /* Optional: rounded corners for the track */
+}
+
+/* Optional: Hover effect for the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Change color when hovering over the thumb */
+}
+
+
+* {
+  font-family: "Josefin Sans", serif;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  width: 200%;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  animation: marquee-reverse 30s linear infinite;
+  width: 200%;
+}
